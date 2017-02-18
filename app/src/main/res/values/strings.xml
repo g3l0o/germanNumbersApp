@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">German Numbers</string>
+    <string name="app_name">Números Alemanes</string>
     <string name="button_numbers">Tabla de Números</string>
-    <string name="button_write_letter">Escribe con letra el número</string>
-    <string name="button_write_number">Escribe el número</string>
+    <string name="button_write_letter">Escribe con Letra el Número</string>
+    <string name="button_write_number">Escribe el Número</string>
+    <string name="title_activity_numbers_table">Tabla de Números</string>
+    <string name="title_activity_text_to_number">Escribe el Número con Letra</string>
+    <string name="title_activity_number_to_text">Teclea el Número</string>
 </resources>

@@ -1,4 +1,4 @@
-package germanNumbers;
+package com.germannumbers.roger.germannumbers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,12 +7,11 @@ import java.util.Map;
  * Created by roger on 14/02/17.
  */
 
-public class germanNumber {
+public class GermanNumber {
     private static final Map<Integer, String> LESS_THAN_TWENTY = new HashMap<Integer, String>();
     private static final Map<Integer, String> TENS = new HashMap<Integer, String>();
-    private static final Map<Integer, String> HUNDREDS = new HashMap<Integer, String>();
 
-    public germanNumber(){
+    public GermanNumber(){
         initiateDictionaries();
     }
 
@@ -23,7 +22,7 @@ public class germanNumber {
             int tens = (int) ((n/10) * 10);
             int units = n - tens;
             String un = LESS_THAN_TWENTY.get(units);
-            if(units <= 2){
+            if(units > 0 & units <= 2){
                 un = un.substring(0, un.length()-1);
             }
             return  un + "und" + TENS.get(tens);

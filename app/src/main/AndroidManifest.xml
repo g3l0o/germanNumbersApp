@@ -15,6 +15,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NumbersTable"
+            android:label="@string/title_activity_numbers_table"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.germannumbers.roger.germannumbers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TextToNumber"
+            android:label="@string/title_activity_text_to_number"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.germannumbers.roger.germannumbers.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NumberToText"
+            android:label="@string/title_activity_number_to_text"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.germannumbers.roger.germannumbers.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
