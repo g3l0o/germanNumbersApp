@@ -6,10 +6,10 @@ import java.util.Map;
 /**
  * Created by roger on 14/02/17.
  */
-
 public class GermanNumber {
     private static final Map<Integer, String> LESS_THAN_TWENTY = new HashMap<Integer, String>();
     private static final Map<Integer, String> TENS = new HashMap<Integer, String>();
+    private static final Map<Integer, String> HUNDREDS = new HashMap<Integer, String>();
 
     public GermanNumber(){
         initiateDictionaries();
@@ -21,11 +21,11 @@ public class GermanNumber {
         }else if (n < 100){
             int tens = (int) ((n/10) * 10);
             int units = n - tens;
-            String un = LESS_THAN_TWENTY.get(units);
-            if(units > 0 & units <= 2){
+            String un = (units != 0) ? LESS_THAN_TWENTY.get(units) : "";
+            if(units <= 2 & units != 0){
                 un = un.substring(0, un.length()-1);
             }
-            return  un + "und" + TENS.get(tens);
+            return  un + (units != 0 ? "und" : "") +TENS.get(tens);
         }else if (n < 1_000){
             int hun = (int) (n/100);
             int tens = n - (hun*100);
